@@ -3,15 +3,15 @@
 function generatePassword($length){
 
     $str = "abcdefghijklmnopqestuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+";
-    $pass = " ";
+    $pass = '';
 
-    for($i=0; $i<=$length; $i++){
+    for($i=0; $i<$length; $i++){
 
-        $pass .= $str[rand(0,strlen($str))];
-        return $pass;
+        $pass = $str[rand(0,strlen($str))];
+        echo $pass;
     }
 
 
 }
 
-echo generatePassword(12);
+generatePassword(12);
